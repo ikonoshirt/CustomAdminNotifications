@@ -50,9 +50,9 @@
         <ikonoshirt>
             <custom_rss_feeds>
                 <feeds>
-
+                    <!--
                    <ikonofeed>http://blog.fabian-blechschmidt.de/feed.xml</ikonofeed>
-
+                    -->
                 </feeds>
             </custom_rss_feeds>
         </ikonoshirt>

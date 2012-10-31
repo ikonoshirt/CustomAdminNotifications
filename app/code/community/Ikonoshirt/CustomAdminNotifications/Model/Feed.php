@@ -37,7 +37,7 @@ class Ikonoshirt_CustomAdminNotifications_Model_Feed
             if (($this->getFrequency($feed) + $this->getLastUpdate($feed))
                 > time()
             ) {
-                #        return $this;
+                return $this;
             }
 
             // IMPORTANT
