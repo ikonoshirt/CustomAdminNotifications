@@ -5,16 +5,17 @@ As I wrote [in my blog](http://blog.fabian-blechschmidt.de/articles/Adminnotific
 As I wrote, there should be an easy way to add RSS feeds to the existing one, here it is.
 
 ## How to use
-Install this module, install your own module and add a few lines to your `Package/Extensionname/etc/config.xml`:
-    &lt;default&gt;
-        &lt;ikonoshirt&gt;
-            &lt;custom_rss_feeds&gt;
-                &lt;feeds&gt;
-                    &lt;fbfeed&gt;http://blog.fabian-blechschmidt.de/feed.xml&lt;/fbfeed&gt;
-                &lt;/feeds&gt;
-            &lt;/custom_rss_feeds&gt;
-        &lt;/ikonoshirt&gt;
-    &lt;/default&gt;
+Install this module, install your own module and add a few lines to your `Package/Extensionname/etc/config.xml`. Just add a node to `ikonoshirt/custom_rss_feeds/feeds` with your RSS feed url.
+
+    <default>
+        <ikonoshirt>
+            <custom_rss_feeds>
+                <feeds>
+                    <fbfeed>http://blog.fabian-blechschmidt.de/feed.xml</fbfeed>
+                </feeds>
+            </custom_rss_feeds>
+        </ikonoshirt>
+    </default>
 
 It is important, that the feed have to be an RSS feed. The following nodes are MUST per item:
 
@@ -25,7 +26,8 @@ It is important, that the feed have to be an RSS feed. The following nodes are M
 
 The following SHOULD:
 
-* severity (int between 4 (NOTICE) and 1 (CRITICAL) as showed in Mage_AdminNotification_Model_Inbox. If no severity is present it is 4.
+
+* severity (int between 4 (NOTICE) and 1 (CRITICAL)) as showed in  `Mage_AdminNotification_Model_Inbox`. If no severity is present it is 4.
 
 
     const SEVERITY_CRITICAL = 1;
