@@ -31,14 +31,16 @@ class Ikonoshirt_CustomAdminNotifications_Model_Feed
             Mage::log('Ikonoshirt_CustomAdminNotifications: No feeds found.');
             return $this;
         }
+
+        if (($this->getFrequency() + $this->getLastUpdate())
+            > time()
+        ) {
+            return $this;
+        }
+
         /* @var $inbox Mage_AdminNotification_Model_Inbox */
         $inbox = Mage::getModel('adminnotification/inbox');
         foreach ($feeds as $feed) {
-            if (($this->getFrequency($feed) + $this->getLastUpdate($feed))
-                > time()
-            ) {
-                return $this;
-            }
 
             // IMPORTANT
             // in getFeedData $this->getFeedUrl() is called,
