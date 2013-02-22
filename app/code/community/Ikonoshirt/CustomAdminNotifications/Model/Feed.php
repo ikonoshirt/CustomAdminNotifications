@@ -61,7 +61,7 @@ class Ikonoshirt_CustomAdminNotifications_Model_Feed
                         'date_added'  => $this->getDate((string)$item->pubDate),
                         'title'       => (string)$item->title,
                         'description' => (string)$item->description,
-                        'url'         => (string)$item->link,
+                        'url'         => ( $item->link ? (string)$item->link : null ),
                     );
                 }
 
