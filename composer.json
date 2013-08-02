@@ -1,0 +1,10 @@
+{
+   "name": "ikonoshirt/customadminnotifications",
+   "type": "magento-module",
+   "description": "Add own RSS Feeds to admin notifications.",
+   "homepage": "https://github.com/ikonoshirt/CustomAdminNotifications",
+   "require": {
+      "magento-hackathon/magento-composer-installer": "dev-master"
+   }
+}
+
