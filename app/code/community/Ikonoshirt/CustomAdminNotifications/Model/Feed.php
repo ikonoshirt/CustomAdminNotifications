@@ -103,4 +103,39 @@ class Ikonoshirt_CustomAdminNotifications_Model_Feed
         Mage::app()->saveCache(time(), 'ikonoshirt_custom_admin_notifications');
         return $this;
     }
+
+    /**
+     * Retrieve feed data as XML element
+     * Changed for following redirects
+     *
+     * @return SimpleXMLElement
+     */
+    public function getFeedData()
+    {
+        $curl = new Varien_Http_Adapter_Curl();
+        $curl->setConfig(array(
+            'timeout'   => 2
+        ));
+        $curl->setOptions(array(
+            CURLOPT_FOLLOWLOCATION => true,
+        ));
+
+        $curl->write(Zend_Http_Client::GET, $this->getFeedUrl(), '1.0');
+        $data = $curl->read();
+        if ($data === false) {
+            return false;
+        }
+        $data = preg_split('/^\r?$/m', $data, 2);
+        $data = trim($data[1]);
+        $curl->close();
+
+        try {
+            $xml  = new SimpleXMLElement($data);
+        }
+        catch (Exception $e) {
+            return false;
+        }
+
+        return $xml;
+    }
 }
