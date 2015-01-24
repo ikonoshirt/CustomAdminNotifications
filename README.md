@@ -1,6 +1,6 @@
 #Ikonoshirt_CustomAdminNotifications
 
-As I wrote [in my blog](http://blog.fabian-blechschmidt.de/articles/Adminnotification-or-Magento-is-phoning-home.html), it is important to keep the people who use our extensions up-to-date. Magento implemented a great feature to do this, the Mage_AdminNotification.
+As I wrote [in my blog](http://blog.fabian-blechschmidt.de/ikonoshirt_customadminnotifications/), it is important to keep the people who use our extensions up-to-date. Magento implemented a great feature to do this, the Mage_AdminNotification.
 
 As I wrote, there should be an easy way to add RSS feeds to the existing one, here it is.
 
