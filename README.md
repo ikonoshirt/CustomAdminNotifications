@@ -37,4 +37,4 @@ The following SHOULD:
 
 ## How to not use
 
-Please don't spam your customer with offers, giftcodes, etc. If he likes your software and extensions, he'll come back and check for other interesting stuff. The notifications are NO advertising channel - as I already mentioned in my blog post.
+Please don't spam your customers with offers, giftcodes, etc. If they like your software and extensions, they'll come back and check for other interesting stuff. The notifications are NO advertising channel - as I already mentioned in my blog post.
