@@ -28,7 +28,6 @@ class Ikonoshirt_CustomAdminNotifications_Model_Feed
     {
         $feeds = $this->getAllFeeds();
         if (!is_array($feeds)) {
-            Mage::log('Ikonoshirt_CustomAdminNotifications: No feeds found.');
             return $this;
         }
 
