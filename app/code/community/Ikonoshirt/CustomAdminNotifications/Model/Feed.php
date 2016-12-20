@@ -55,8 +55,8 @@ class Ikonoshirt_CustomAdminNotifications_Model_Feed
                 foreach ($feedXml->channel->item as $item) {
                     $feedData[] = array(
                         'severity'    =>
-                        (int)isset($item->severity) ? $item->severity
-                        : Mage_AdminNotification_Model_Inbox::SEVERITY_NOTICE,
+                            (int)isset($item->severity) ? $item->severity
+                                : Mage_AdminNotification_Model_Inbox::SEVERITY_NOTICE,
                         'date_added'  => $this->getDate((string)$item->pubDate),
                         'title'       => (string)$item->title,
                         'description' => (string)$item->description,
@@ -129,7 +129,7 @@ class Ikonoshirt_CustomAdminNotifications_Model_Feed
         $curl->close();
 
         try {
-            $xml  = new SimpleXMLElement($data);
+            $xml  = @new SimpleXMLElement($data);
         }
         catch (Exception $e) {
             return false;
